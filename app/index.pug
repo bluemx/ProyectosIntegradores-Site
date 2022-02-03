@@ -93,8 +93,11 @@ html(lang="es")
                                     option(value="1") Nombre de la institución
                                     option(value="2") Nombre de la institución
                                     option(value="3") Nombre de la institución
-                            .my-4: input.form-control(placeholder="alias")
-                            .my-4: input.form-control(placeholder="Contraseña")
+                            .row
+                                .col-6: input.form-control(placeholder="Grado")
+                                .col-6: input.form-control(placeholder="Grupo")
+                            .my-4: input.form-control(placeholder="Alias")
+                            .my-4: input.form-control(placeholder="Contraseña" type="password")
                 
                 div.text-grey.h4.text-bolder.text-center.mt-5 Datos del padre, madre o tutor
                 .row
@@ -118,9 +121,7 @@ html(lang="es")
                 .col-10.offset-1
                     div.text-grey.h2.text-bolder.my-5 Docentes
                     p.my-5 Consectetur adipisicing elit. Veritatis delectus ipsam facilis neque libero consectetur ducimus repudiandae quo vel quis! Aliquid culpa in consequuntur recusandae soluta, fugit beatae assumenda voluptates.
-                .col-md-4.offset-md-2.col-6.my-5
-                    button().btn.btn-light Solicitar más información
-                .col-md-4.col-6.my-5
+                .col-md-4.offset-4.col-6.my-5
                     button().btn.btn-primary Canjea tu código
                 .col-md-6.offset-md-3.col-10.offset-1.my-5: img(src="app/i/motivs.svg", alt="PI").img-fluid
                 .col-12.my-5: hr
