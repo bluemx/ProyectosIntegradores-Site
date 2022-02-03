@@ -1,0 +1,91 @@
+include pug/_utils.pug
+doctype html
+html(lang="es")
+    head
+        include pug/_head
+    body()
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top#mainnavbar
+            .container-fluid.text-center.justify-content-center
+                a(href="#").navbar-brand
+                    img(src="app/i/ProyectosIntegradores.svg" title="Plataformas Integradoras").img-fluid.brand
+        
+        
+        section#odas
+            template(v-if="start==0") 
+                .row.text-center.bg-yellow.py-5
+                    .col-12
+                        .h2.text-bolder.text-dark.py-5 Conociendo a Jalisco. Mi bello Jalisco
+                        p.my-3 ¿Reconocemos toda la riqueza de nuestro estado?, ¿será importante conocer la riqueza cultural, social y natural de nuestra entidad?. Identifica las regiones y sus municipios.
+                        button.btn.btn-primary.my-5(@click="start++") Comenzar actividad
+            template(v-if="start==1") 
+                .row.text-center.py-5
+                    .col-12
+                        p.my-3 Observa el video introductorio "Nuestra entidad".
+                        | <iframe width="100%" height="315" src="https://www.youtube.com/embed/51fXZ61Ott4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        button.btn.btn-primary.my-5(@click="start++") ¡Listo!. Continuar
+            template(v-if="start==2") 
+                .row.text-center.mb-5
+                    .col-12
+                        h3.text-bold Arrastra los municipios a la región de Jalisco a la que corresponden.
+                .row.text-center
+                    .col-4
+                        h4.text-bolder.text-blue NORTE
+                    .col-4
+                        h4.text-bolder.text-green CIÉNEGA
+                    .col-4
+                        h4.text-bolder.text-main SUR
+                .row.text-center.acomodador
+                    .col-4: draggable(
+                        v-model="norte"
+                        @start="drag=true"
+                        @end="drag=false"
+                        element="div"
+                        class="groupDrag"
+                        :options="{group:'a'}"
+                        )
+                        div(v-for="(i, index) in norte").badge.bg-blue.rounded-pill {{i}}
+                    .col-4: draggable(
+                        v-model="cienega"
+                        @start="drag=true"
+                        @end="drag=false"
+                        element="div"
+                        class=" groupDrag"
+                        :options="{group:'a'}"
+                        )
+                        div(v-for="(i, index) in cienega").badge.bg-green.rounded-pill {{i}}
+
+                    .col-4: draggable(
+                        v-model="sur"
+                        @start="drag=true"
+                        @end="drag=false"
+                        element="div"
+                        class=" groupDrag"
+                        :options="{group:'a'}"
+                        )
+                        div(v-for="(i, index) in sur").badge.bg-main.rounded-pill {{i}}
+                    
+                .text-center.my-5: button.btn.btn-primary.my-5(@click="start++") Finalizar.
+            
+            template(v-if="start==3") 
+                .row.text-center.bg-yellow.py-5
+                    .col-12
+                        .h3.text-bolder.text-grey.py-5 ¡Felicidades! Has completado la actividad con el #[span.text-dark 100%] de respuestas correctas.
+                        p.my-3 Reflexionemos: ¿reconocemos toda la riqueza que nos presentó el video sobre nuestro estado?, ¿será importante conocer la riqueza cultural, social y natural de nuestra entidad?, ¿por qué?
+                        button.btn.btn-light.my-5(@click="location.reload()") Volver a realizar actividad
+
+
+        footer.mini
+            .container
+                .row.text-center.align-items-center
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-df.svg", alt="Digital Family").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-r.svg", alt="Recrea").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-e.svg", alt="Educación").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-j.svg", alt="Jalisco").img-fluid
+
+        //include pug/_blue
+
+        include pug/_scripts
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.14.1/vuedraggable.min.js")
+        script(src="app/odas.js")

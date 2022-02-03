@@ -5,6 +5,7 @@ $grey: #768890
 $green: #94c73d
 $blue: #02A6E1
 $dark: #343a40
+$yellow: #FFC600
 
 html
   scroll-behavior: smooth
@@ -27,7 +28,16 @@ html
     font-family: 'nutmeg', sans-serif;
     font-weight: 900
 
-
+.bg-main
+    background: $main
+.bg-green
+    background: $green
+.bg-blue
+    background: $blue
+.bg-main
+    background: $main
+.bg-yellow
+    background: $yellow
 
 .btn-primary
     background: $main
@@ -113,3 +123,40 @@ footer
     position: static
     [data-bs-target]
         background: #FFC600
+
+
+// -------
+
+#odas
+    position: relative
+    z-index: 4
+    width: 99%
+    padding: 20px 6px
+    background: rgba(230,230,230,0.7)
+    border-radius: 10px
+    margin: 80px auto
+    .row
+        margin: 0
+        border-radius: 6px
+    .groupDrag
+        background: #fff
+        display: flex
+        flex-direction: column
+        padding: 20px 0px
+        margin: 0px
+        border-radius: 6px
+        border: 4px dashed $grey
+    .badge
+        font-size: 1rem
+        box-shadow: 6px 6px 0 rgba(0,0,0,0.1)
+        cursor: pointer
+        margin: 6px
+        white-space: normal
+    @media (max-width:600px)
+        h4
+            font-size: 1rem
+        .badge
+            font-size: 0.8rem
+
+
+

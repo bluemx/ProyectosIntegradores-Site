@@ -1,0 +1,50 @@
+include pug/_utils.pug
+doctype html
+html(lang="es")
+    head
+        include pug/_head
+    body()
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top#mainnavbar
+            .container-fluid.text-center.justify-content-center
+                a(href="#").navbar-brand
+                    img(src="app/i/ProyectosIntegradores.svg" title="Plataformas Integradoras").img-fluid.brand
+        
+
+        section#odas
+            template(v-if="start==0") 
+                .row.text-center.bg-yellow.py-5
+                    .col-12
+                        .h2.text-bolder.text-dark.py-5 Visitando los planetas.
+                        .h5.text-bold.text-grey 2º Secundaria - Abril
+                        p.my-3 El proyecto integrador de abril para segundo grado de Secundaria tiene por eje la fin comprender las características y la dinámica del Sistema Solar, y el papel de la fuerza gravitacional en el movimiento de los planetas.
+                        button.btn.btn-primary.my-5(@click="start++") Comenzar actividad
+
+            template(v-if="start==1") 
+                .row.text-center.py-5
+                    .col-12
+                        p.my-3 Interactua con la simulación y observa cómo se comportan los planetas al girar en sus ejes.
+                        | <iframe width="100%" height="315" src="https://typpo.github.io/spacekit/examples/simple/index.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        //button.btn.btn-primary.my-5(@click="start++") Finalizar actividad
+            //template(v-if="start==2") 
+                .row.text-center.bg-yellow.py-5
+                    .col-12
+                        .h3.text-bolder.text-grey.py-5 ¡Felicidades! Has completado la actividad con el #[span.text-dark 100%] de respuestas correctas.
+                        p.my-3 Reflexionemos: ¿reconocemos toda la riqueza que nos presentó el video sobre nuestro estado?, ¿será importante conocer la riqueza cultural, social y natural de nuestra entidad?, ¿por qué?
+                        button.btn.btn-light.my-5(@click="location.reload()") Volver a realizar actividad
+
+
+        footer.mini
+            .container
+                .row.text-center.align-items-center
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-df.svg", alt="Digital Family").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-r.svg", alt="Recrea").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-e.svg", alt="Educación").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-j.svg", alt="Jalisco").img-fluid
+
+        //include pug/_blue
+
+        include pug/_scripts
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.14.1/vuedraggable.min.js")
+        script(src="app/odas.js")

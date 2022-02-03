@@ -340,6 +340,55 @@
 		"oF": 2,
 		"oS": 1
 		},
+	"\/app\/odas-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/app\/odas-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/app\/odas.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/app\/odas-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/app\/odas.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/odas.html",
+		"oF": 2,
+		"oS": 1
+		},
+	"\/app\/odas\/jalisco.png": {
+		"ft": 32768,
+		"iS": 444395,
+		"oA": 0,
+		"oAP": "\/app\/odas\/jalisco.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/app\/odas2.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/odas2.html",
+		"oF": 2,
+		"oS": 1
+		},
 	"\/app\/pug\/_banner.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -471,6 +520,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/index.html",
+		"oF": 0
+		},
+	"\/odas.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/odas.html",
 		"oF": 0
 		},
 	"\/user.html": {
@@ -2297,15 +2353,15 @@
 		"quality": 100
 		},
 	"languageDefaultsJS": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
-		"syntaxCheckerStyle": 3,
+		"minifyOutput": 0,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
