@@ -1,0 +1,19 @@
+include _utils
+.carousel.slide#bannercarousel(data-bs-ride="carousel")
+    .carousel-inner
+        .carousel-item.active(data-bs-interval="5000")
+            .d-flex
+                +img('app/i/mfelix.jpg', 'maria', {'class': 'w-50'})
+                +img('app/i/mfelix2.jpg', 'maria', {'class': 'w-50'})
+        .carousel-item(data-bs-interval="5000")
+            .d-flex
+                +img('app/i/cant.jpg', 'cantinflas', {'class': 'w-50'})
+                +img('app/i/cant2.jpg', 'cantinflas', {'class': 'w-50'})
+        .carousel-item(data-bs-interval="5000")
+            .d-flex
+                +img('app/i/aidac.jpg', 'aidac', {'class': 'w-50'})
+                +img('app/i/edithen.jpg', 'edithen', {'class': 'w-50'})
+    .carousel-control-prev(type="button" data-bs-target="#bannercarousel"  data-bs-slide="prev")
+        span.carousel-control-prev-icon
+    .carousel-control-next(type="button" data-bs-target="#bannercarousel"  data-bs-slide="next")
+        span.carousel-control-next-icon

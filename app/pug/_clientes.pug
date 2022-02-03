@@ -1,0 +1,17 @@
+mixin client(tag)
+    div(data-en=en('areaClientes'+tag)).py-5 !{es('areaClientes'+tag)}
+
+
+.container-fluid#clientes
+    .row
+        h2.text-center(data-en=en('areaClientes'))=es('areaClientes')
+    .row
+        .col-md-8.offset-md-2
+            +client('Maria')
+            +client('Cantinflas')
+            +client('Rigo')
+            +client('Paco')
+            +client('Isabel')
+            +client('Mitzi')
+            +client('Edith')
+            +client('Aida')

@@ -1,0 +1,49 @@
+mixin nota(tag, img, link, activeclass)
+    .carousel-item(data-bs-interval="5000" class=activeclass).py-5
+        .row.align-items-center
+            .col-6: +img('app/noticias/'+img, 'areaNoticiasTitle'+tag)
+            .col-6
+                h3(data-en=en('areaNoticiasTitle'+tag))=es('areaNoticiasTitle'+tag)
+                .text-center.my-4
+                    button.btn.btn-primary(data-en=en('areaNoticiasLeer') data-bs-toggle="modal" data-bs-target='#noticia'+tag)=es('areaNoticiasLeer')
+                    
+                    div(id='noticia'+tag).modal.fade
+                        .modal-dialog.modal-lg
+                            .modal-content
+                                .modal-header.text-start
+                                    h3.modal-title(data-en=en('areaNoticiasTitle'+tag))=es('areaNoticiasTitle'+tag)
+                                    button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+                                .modal-body.text-start
+                                    .p-5
+                                        +img('app/noticias/'+img, 'areaNoticiasTitle'+tag)
+                                        div(data-en=en('areaNoticiasTxt'+tag)).my-4 !{es('areaNoticiasTxt'+tag)}
+                                        .text-center.my-4
+                                            a(href=link target="_blank" ).btn.btn-primary
+                                                span(data-en=en('areaNoticiasVer'))=es('areaNoticiasVer') 
+                                                | &nbsp;
+                                                span.bi.bi-box-arrow-up-right 
+.container-fluid#noticias
+    .row
+        h2.text-center(data-en=en('areaNoticias'))=es('areaNoticias')
+    .row.justify-content-center.my-5
+        .carousel.slide.carousel-dark#noticiascarousel(data-bs-ride="carousel")
+            .carousel-inner
+                +nota('Paul', 'paul-stanley-paco-stanley.jpg', 'https://www.milenio.com/espectaculos/television/paul-stanley-serie-paco-stanley-interpretaria-papa', 'active')
+                
+                +nota('Rigo', 'rigo-tovar-bioserie.jpg', 'https://www.tvnotas.com.mx/noticias-espectaculos-mexico/si-habra-bioserie-de-rigo-tovar-para-el-proximo-ano', '')
+                
+                +nota('Maria', 'maria-felix-documental-filme-telenovela.jpg', 'https://www.reforma.com/haran-filme-documental-y-hasta-telenovela-sobre-maria-felix/ar2163507', '')
+                
+
+
+            .carousel-control-prev(type="button" data-bs-target="#noticiascarousel"  data-bs-slide="prev")
+                //span.bi.bi-arrow-left-square-fill
+                span.carousel-control-prev-icon
+            .carousel-control-next(type="button" data-bs-target="#noticiascarousel"  data-bs-slide="next")
+                //span.bi.bi-arrow-right-square-fill
+                span.carousel-control-next-icon
+            .carousel-indicators
+                button(type="button" data-bs-target="#noticiascarousel" data-bs-slide-to=0).active
+                button(type="button" data-bs-target="#noticiascarousel" data-bs-slide-to=1)
+                button(type="button" data-bs-target="#noticiascarousel" data-bs-slide-to=2)
+

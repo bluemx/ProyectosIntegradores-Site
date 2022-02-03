@@ -1,0 +1,22 @@
+
+
+mixin servicebox(tag)
+    .col-md-4.text-center.my-5
+        - img = 'app/i/servicio_'+tag.toLowerCase()+'.svg'
+        - title = 'areaServiciosTitle'+tag
+        - text = 'areaServiciosTxt'+tag
+        +img(img, title)
+        h3.py-3(data-en=en(title))=es(title)
+        p(data-en=en(text))=es(text)
+
+
+
+.container-fluid#servicios
+    .row
+        h2.text-center(data-en=en('areaServicios'))=es('areaServicios')
+    .row.justify-content-center.my-5
+        +servicebox('Legal')
+        +servicebox('Produccion')
+        +servicebox('Relaciones')
+        +servicebox('Branding')
+        +servicebox('Representacion')

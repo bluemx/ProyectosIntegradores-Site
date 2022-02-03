@@ -1,0 +1,115 @@
+@import font/stylesheet.css
+    
+$main: #e7004b
+$grey: #768890
+$green: #94c73d
+$blue: #02A6E1
+$dark: #343a40
+
+html
+  scroll-behavior: smooth
+.text-main
+    color: $main
+.text-grey
+    color: $grey
+.text-green
+    color: $green
+.text-blue
+    color: $blue
+
+.text-normal
+    font-family: 'nutmeg', sans-serif;
+    font-weight: normal
+.text-bold
+    font-family: 'nutmeg', sans-serif;
+    font-weight: 700
+.text-bolder
+    font-family: 'nutmeg', sans-serif;
+    font-weight: 900
+
+
+
+.btn-primary
+    background: $main
+    border: none
+    &:hover
+        background: $grey
+    &:active
+        background: $blue
+
+
+body
+    font-family: 'nutmeg', sans-serif;
+    font-weight: normal
+    color: $dark
+
+
+
+
+#mainnavbar
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1)
+    z-index: 99
+    .nav-link
+        font-weight: normal
+    .nav-link.active
+        color: $main
+    
+    @media(max-width:992px)
+        .navbar-collapse
+            text-align: center
+
+    .navbar-toggler
+        border: none
+        color: $main
+
+    .iniciar-sesion
+        border-bottom: 4px solid $main
+
+
+.navbar-brand
+    width: 100%
+    max-width: 280px
+
+
+section
+    padding-top: 68px
+
+
+hr
+    max-width: 280px
+    margin: 20px auto
+    border-top: 10px solid $grey
+    opacity: 1
+
+
+.levels
+    img.img-fluid
+        max-width: 200px
+
+.plecablue
+    background: #83B5E1
+    img.bluecircle
+        max-width: 40px
+
+
+
+
+
+footer
+    background: $dark
+    padding-top: 20px
+    padding-bottom: 20px
+    img.img-fluid
+        max-width: 120px
+    &.mini
+        padding-top: 0
+        padding-bottom: 0
+        img.img-fluid
+            max-width: 80px
+            max-height: 50px
+
+
+.carousel-indicators
+    position: static
+    [data-bs-target]
+        background: #FFC600

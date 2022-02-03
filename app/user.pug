@@ -1,0 +1,45 @@
+include pug/_utils.pug
+doctype html
+html(lang="es")
+    head
+        include pug/_head
+    body()
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top#mainnavbar
+            .container-fluid
+                a(href="#").navbar-brand
+                    img(src="app/i/ProyectosIntegradores.svg" title="Plataformas Integradoras").img-fluid.brand
+                button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu")
+                    i.bi.bi-list
+                .collapse.navbar-collapse.justify-content-end#navbarMenu
+                    ul.navbar-nav
+                        li.nav-item: a.nav-link(href="#") Cursos
+                        li.nav-item: a.nav-link(href="#") Mi cuenta
+                        li.nav-item: a.nav-link(href="#") Mis cursos
+                        li.nav-item.iniciar-sesion: a.nav-link(href="index.html") Cerrar sesión
+                        
+        
+        section
+            #userScreens.carousel.slide(data-bs-ride="false" data-bs-interval="false").my-5
+                .carousel-inner
+                    .carousel-item.px-3(role="button" data-bs-target="#userScreens" data-bs-slide="next").active
+                        img(src="app/i/user1.png", alt="PI").d-block.w-100
+                    .carousel-item.px-3(role="button" data-bs-target="#userScreens" data-bs-slide="next")
+                        img(src="app/i/user2.png", alt="PI").d-block.w-100
+                    .carousel-item.px-3(role="button" data-bs-target="#userScreens" data-bs-slide="next")
+                        img(src="app/i/user3.png", alt="PI").d-block.w-100
+                .carousel-indicators.mt-5
+                    div(data-bs-target="#userScreens" data-bs-slide-to="0").active
+                    div(data-bs-target="#userScreens" data-bs-slide-to="1")
+                    div(data-bs-target="#userScreens" data-bs-slide-to="2")
+
+        footer.mini
+            .container
+                .row.text-center.align-items-center
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-df.svg", alt="Digital Family").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-r.svg", alt="Recrea").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-e.svg", alt="Educación").img-fluid
+                    .col-md-3.col-6.my-3: img(src="app/i/logo-j.svg", alt="Jalisco").img-fluid
+
+        //include pug/_blue
+
+        include pug/_scripts

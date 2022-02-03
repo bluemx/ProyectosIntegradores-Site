@@ -1,0 +1,152 @@
+include pug/_utils.pug
+doctype html
+html(lang="es")
+    head
+        include pug/_head
+    body(data-bs-spy="scroll" data-bs-target="#mainnavbar")
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top#mainnavbar
+            .container-fluid
+                a(href="#").navbar-brand
+                    img(src="app/i/ProyectosIntegradoresRecrea.svg" title="Plataformas Integradoras").img-fluid.brand
+                button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu")
+                    i.bi.bi-list
+                .collapse.navbar-collapse.justify-content-end#navbarMenu
+                    ul.navbar-nav
+                        li.nav-item: a.nav-link(href="#que-es") ¿Qué es?
+                        li.nav-item: a.nav-link(href="#estudiantes") Estudiantes
+                        li.nav-item: a.nav-link(href="#docentes") Docentes
+                        li.nav-item: a.nav-link(href="#contacto") Contacto
+                        li.nav-item.iniciar-sesion: a.nav-link(href="user.html") Iniciar sesión
+                        
+        
+        section: img(src="app/i/banner1.jpg", alt="PI").img-fluid
+        
+        section#que-es.text-center
+            .container
+                .row
+                    .col-8.offset-2
+                        img(src="app/i/ProyectosIntegradores.svg", alt="PI").img-fluid
+
+                    .col-12: hr
+                .row.text-center
+                    .col-10.offset-1: p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis delectus ipsam facilis neque libero consectetur ducimus repudiandae quo vel quis! Aliquid culpa in consequuntur recusandae soluta, fugit beatae assumenda voluptates.
+
+        section: img(src="app/i/banner2.jpg", alt="PI").img-fluid
+        
+        section.container
+            .row.text-center
+                .col-10.offset-1: p Veritatis delectus ipsam facilis neque libero consectetur ducimus repudiandae quo vel quis! Aliquid culpa in consequuntur recusandae soluta, fugit beatae assumenda voluptates. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                .col-12: hr
+
+        section.container
+            
+            .row.text-center
+                .col-12
+                    div
+                        span.text-green.h1.text-bolder Tres niveles educativos
+                    div
+                        span.text-grey.h1.text-bolder en una 
+                        span.text-main.h1.text-bolder misma plataforma
+            .row.text-center.levels
+                .col-md-4.p-5: img(src="app/i/rd-preescolar.svg", alt="PI").img-fluid
+                .col-md-4.p-5: img(src="app/i/rd-primaria.svg", alt="PI").img-fluid
+                .col-md-4.p-5: img(src="app/i/rd-secundaria.svg", alt="PI").img-fluid
+            .row.text-center
+                .col-12
+                    div
+                        span.text-blue.h1.text-bolder Un mundo de aprendizaje
+                .col-md-6.offset-md-3.col-10.offset-1.my-5: img(src="app/i/motivs.svg", alt="PI").img-fluid
+                .col-12: hr
+         
+        section.container#estudiantes
+            .row.text-center
+                .col-10.offset-1
+                    div.text-grey.h2.text-bolder.my-5 Estudiantes
+                    p.my-5 Consectetur adipisicing elit. Veritatis delectus ipsam facilis neque libero consectetur ducimus repudiandae quo vel quis! Aliquid culpa in consequuntur recusandae soluta, fugit beatae assumenda voluptates.
+
+            form
+                div.text-grey.h4.text-bolder.text-center.mt-5 Datos del estudiante
+                .row
+                    .col-md-6
+                        .p-2
+                            .my-4: input.form-control(placeholder="Nombre")
+                            .my-4: input.form-control(placeholder="Apellido")
+                            .form-group
+                                .row.text-grey
+                                    legend.col-form-label Género
+                                    .col-5: .form-check
+                                        label
+                                            input.form-check-input(type="radio" name="genero")
+                                            span Femenino
+                                    .col-5: .form-check
+                                        label
+                                            input.form-check-input(type="radio" name="genero")
+                                            span Masculino
+                        
+                    .col-md-6
+                        
+                        .bg-light.p-2
+                            .my-4
+
+                                select.form-select
+                                    option(selected) Institución educativa
+                                    option(value="1") Nombre de la institución
+                                    option(value="2") Nombre de la institución
+                                    option(value="3") Nombre de la institución
+                            .my-4: input.form-control(placeholder="alias")
+                            .my-4: input.form-control(placeholder="Contraseña")
+                
+                div.text-grey.h4.text-bolder.text-center.mt-5 Datos del padre, madre o tutor
+                .row
+                    .col-md-6
+                        .p-2
+                            .my-4: input.form-control(placeholder="Nombre")
+                            .my-4: input.form-control(placeholder="Apellido")
+                    .col-md-6
+                        
+                        .bg-light.p-2
+                            .my-4: input.form-control(placeholder="Correo electrónico")
+                            .my-4: input.form-control(placeholder="Contraseña")
+                        
+                    .col-12.text-center.my-5: button(type="submit").btn.btn-primary Registrarme
+                    .col-md-6.offset-md-3.col-10.offset-1.my-5: img(src="app/i/motivs.svg", alt="PI").img-fluid
+                    .col-12: hr
+
+
+        section.container#docentes
+            .row.text-center
+                .col-10.offset-1
+                    div.text-grey.h2.text-bolder.my-5 Docentes
+                    p.my-5 Consectetur adipisicing elit. Veritatis delectus ipsam facilis neque libero consectetur ducimus repudiandae quo vel quis! Aliquid culpa in consequuntur recusandae soluta, fugit beatae assumenda voluptates.
+                .col-md-4.offset-md-2.col-6.my-5
+                    button().btn.btn-light Solicitar más información
+                .col-md-4.col-6.my-5
+                    button().btn.btn-primary Canjea tu código
+                .col-md-6.offset-md-3.col-10.offset-1.my-5: img(src="app/i/motivs.svg", alt="PI").img-fluid
+                .col-12.my-5: hr
+
+        section.container#contacto
+            .row
+                .col-10.offset-1.text-center
+                    div.text-grey.h2.text-bolder.my-5 Contáctanos
+                form().row
+                    .col-md-6
+                        p.my-5 Consectetur adipisicing elit. Veritatis delectus ipsam facilis neque libero consectetur ducimus repudiandae quo vel quis! Aliquid culpa in consequuntur recusandae soluta, fugit beatae assumenda voluptates.
+                    .col-md-6
+                        .my-4: input.form-control(placeholder="Nombre")
+                        .my-4: input.form-control(placeholder="Correo electrónico")
+                        .my-4: input.form-control(placeholder="Teléfono")
+                        .my-4: textarea.form-control(placeholder="Mensaje")
+                        .text-center.my-5: button(type="submit").btn.btn-primary Enviar
+
+        footer
+            .container
+                .row.text-center.align-items-center
+                    .col-md-3.my-3: img(src="app/i/logo-df.svg", alt="Digital Family").img-fluid
+                    .col-md-3.my-3: img(src="app/i/logo-r.svg", alt="Recrea").img-fluid
+                    .col-md-3.my-3: img(src="app/i/logo-e.svg", alt="Educación").img-fluid
+                    .col-md-3.my-3: img(src="app/i/logo-j.svg", alt="Jalisco").img-fluid
+
+        //include pug/_blue
+
+        include pug/_scripts

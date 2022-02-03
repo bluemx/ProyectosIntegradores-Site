@@ -1,0 +1,20 @@
+.container-fluid#quienes-somos
+    .row
+        h2.text-center(data-en=en('areaQuienes'))=es('areaQuienes')
+    .row
+        .col-md-8
+            div(data-en=en('areaQuienesTxt')).py-5 !{es('areaQuienesTxt')}
+        .col-md-4.text-center.align-self-center
+            +img('app/i/pinktiger-white.png', 'headTitle')
+
+.container.py-5
+    .row.my-5
+        .col-md-8.py-4
+            div(data-en=en('areaQuienesTxt2')) !{es('areaQuienesTxt2')}
+        .col-md-4.align-self-center
+            +img('app/i/pinktiger-anios.jpg', 'headTitle')
+    .row.my-5
+        .col-md-4.align-self-center
+            +img('app/i/pinktiger-aliados.jpg', 'headTitle')
+        .col-md-8.py-5
+            div(data-en=en('areaQuienesTxt3')) !{es('areaQuienesTxt3')}
